@@ -1,5 +1,3 @@
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
-
 @font-face {
     font-family: 'nerisblack';
     src: font-url('Neris-Black-webfont.eot');
@@ -35,9 +33,6 @@
     font-style: normal;
 
 }
-
-
-
 
 html {
     font-family: sans-serif;
@@ -200,7 +195,7 @@ html input[disabled] {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
     border: 0;
-    padding: 0
+    padding: 0;
 }
 
 input {
@@ -296,7 +291,7 @@ th {
 }
 
 .github,
-.hero .email {
+.nohero .email {
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
@@ -310,7 +305,7 @@ th {
 }
 
 .border-box,
-.hero .email {
+.nohero .email {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box
@@ -346,7 +341,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: #444
+    color: #444;
 }
 
 strong {
@@ -372,6 +367,15 @@ h3 {
     line-height: 15px;
     line-height: .9375rem;
     letter-spacing: 1px
+}
+
+.nohero h3 {
+	color: white;
+	text-align: center
+}
+
+.nohero a {
+	color: white
 }
 
 section {
@@ -411,7 +415,8 @@ footer p {
 }
 
 .button:hover {
-    text-decoration: none
+    text-decoration: none;
+    background: white;
 }
 
 .button-container {
@@ -423,8 +428,6 @@ footer p {
 .button-container a {
 		background: black;
 }
-
-
 
 .hero {
     background: white;
@@ -479,12 +482,18 @@ footer p {
     line-height: 2.5rem;
     margin-bottom: 2.625rem
 }
-.hero .bold {
+
+.bold {
     font-family: 'nerisblack';
 } 
-.hero .light {
+
+.light {
     font-family: 'nerislight';
 } 
+
+.thin {
+	font-family: 'neristhin';
+}
 
 .nohero p {
 	color: white;
@@ -504,7 +513,7 @@ footer p {
     }
 }
 
-.hero .email {
+.nohero .email {
     display: block;
     letter-spacing: .03em;
     padding: 20px;
@@ -515,38 +524,35 @@ footer p {
     line-height: 1.5rem
 }
 
-.hero .email::-webkit-input-placeholder {
-    color: #f6cf48
+.nohero .email::-webkit-input-placeholder {
+    color: black
 }
 
-.hero .email:-moz-placeholder {
-    color: #f6cf48
+.nohero .email:-moz-placeholder {
+    color: black
 }
 
-.hero .email::-moz-placeholder {
-    color: #f6cf48
+.nohero .email::-moz-placeholder {
+    color: black
 }
 
-.hero .email:-ms-input-placeholder {
-    color: #f6cf48
+.nohero .email:-ms-input-placeholder {
+    color: black
 }
 
-.hero .email:active,
-.hero .email:focus,
-.hero .email:hover {
+.nohero .email:active,
+.nohero .email:focus,
+.nohero .email:hover {
     -moz-transform: scale(1.02);
     -ms-transform: scale(1.02);
     -webkit-transform: scale(1.02);
     transform: scale(1.02)
 }
 
-.hero form {
-    position: relative
-}
 
-.hero form input[type=submit] {
-    background: url(../images/arrow-right.svg) no-repeat center;
-    background-size: 20%;
+.nohero form input[type=submit] {
+    background: url(paw.svg) no-repeat center;
+    background-size: 50%;
     border: none;
     color: transparent;
     position: absolute;
@@ -571,8 +577,10 @@ form {
 }
 
 .button.email {
-    color: #fff;
-    background: #625835
+    color: black;
+    background: white;
+    text-align: center;
+    font-family: 'neristhin'
 }
 
 .response {
@@ -594,13 +602,6 @@ form {
     margin-top: 4.6875rem
 }
 
-.info h2:after {
-    content: url(zig-zag.svg);
-    display: block;
-    margin: 60px auto 0;
-    text-align: center;
-    width: 15%
-}
 
 @media only screen and (max-width: 480px) {
     .info h2:after {
@@ -645,17 +646,29 @@ form {
 }
 
 .github:hover {
-    border-color: #625835;
-    color: #625835
+    border-color: black;
+    color: black
 }
 
 footer {
-    background: #272727;
+    background: black;
     display: inline-block;
     width: 100%
 }
 
+footer a {
+	color: white;
+	background: black;
+}
+
+footer a:hover {
+	background: black;
+	color: white;
+}
+
 footer p {
+	font-family: 'nerislight';
+	color: white;
     letter-spacing: .02em;
     opacity: .8
 }
